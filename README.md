@@ -9,13 +9,13 @@ Das Einsatzgebiet von RasaTUC soll die [FAQ-Seite](https://bildungsportal.sachse
 
 ## Wie kann man dieses Repository nutzen?
 Bevor man einfach das Repository cloned muss man die Umgebung auf seiner lokalen Workstation einrichten.
-1. [Umgebung einrichten](#1.-Einrichtung-der-Umgebung)
-2. [Modelle als Dependency einbinden](#2.-Modelle-als-Dependency-einbinden)
-3. [Rasa verwenden](#3.-Rasa-verwenden)
+1. [Umgebung einrichten](#1-einrichtung-der-umgebung)
+2. [Modelle als Dependency einbinden](#2-modelle-als-dependency-einbinden)
+3. [Rasa verwenden](#3-rasa-verwenden)
 ### 1. Einrichtung der Umgebung
 - *Es gibt zwei Möglichkeiten sich die Umgebung einzurichten:*
-    - [Venv](#1.1-Venv-von-Python) von Python **ODER**
-    - [Anaconda](#Anaconda)
+    - [Venv](#11-venv-von-python) von Python **ODER**
+    - [Anaconda](#12-anaconda)
 #### 1.1 Venv von Python
 - Auf der offiziellen Seite von [Python](https://www.python.org/downloads/) die neuste Version herunterladen und installieren.
     - *ACHTUNG: In der [Dokumentation](https://rasa.com/docs/rasa/installation#quick-installation) von Rasa bitte auf die unterstützte Python Version achten!*
