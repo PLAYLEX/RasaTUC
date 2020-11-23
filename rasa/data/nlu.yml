@@ -123,86 +123,86 @@ nlu:
     - can i get a report template?
     - where can i find a report template for [Word](programm)?
 
- - intent: how_long
-   examples:
-     - how long should my report be?
-     - how long has my report to be?
-     - how many pages are required?
-     - whats the require page countof the report?
-     - how much do i need to write?
+- intent: how_long
+  examples: |
+    - how long should my report be?
+    - how long has my report to be?
+    - how many pages are required?
+    - whats the require page countof the report?
+    - how much do i need to write?
 
- - intent: titelpage_information
-   examples:
-     - what information should be placed on the title page?
-     - how should the title page look?
-     - what should i write on the title page?
-     - which information needs to go on the title page?
+- intent: titelpage_information
+  examples: |
+    - what information should be placed on the title page?
+    - how should the title page look?
+    - what should i write on the title page?
+    - which information needs to go on the title page?
 
 - intent: sickness_presentationday
-  examples:
+  examples: |
     - what should i do if i get sick on my presentation day?
     - i am ill and my presentation is towmorrow. what do i do?
     - what can i do if i am ill at the presentation day?
     - what do i need to do if i cant hold my presentation due to illness?
 
 - intent: end_seminar
-  examples:
+  examples: |
     - can i abort the seminar?
     - is it possible to end the seminar during the semester?
     - how do i unregister after the semester started?
     - i want to leave the seminar
 
 - intent: presentation_last_semester
-  examples:
+  examples: |
     - i already completed my presentation last semester. can i do the report now?
     - can i do presentation and report in different semesters?
     - Do i need to redo the presentation if i already did it last semester?
     - Am i allowed to do the report to my presentation from last semester?
 
 - intent: own_topic
-  examples:
+  examples: |
     - is it possible to create my own topic?
     - do i have to choose one of the pregiven topics?
     - is there a way to do my own topic?
     - how can i submit my own topic?
 
 - intent: internship
-  examples:
+  examples: |
     - are there problems because i am in my intern ship?
     - can i still register during my intern ship?
     - can interns also register for the course?
     - i am intern. what to do?
 
 - intent: course_full
-  examples:
+  examples: |
     - what are my options if the course is full?
     - the course is full. can i still register?
     - all spaces are taken. how do i still join?
     - what are the options to enroll for this course if the participation is already full?
 
 - intent: deadline_for_submissions
-  examples:
+  examples: |
     - when do i need to submit my report?
     - what is the deadline for
     - where do i find the deadline for submissions?
     - till when will submissions be taken?
 
 - intent: presentation_template
-  examples:
+  examples: |
     - how does a presentation need to look?
     - where do i find a template for my presentation?
     - what needs to be in my presentation?
     - how should my presentation look?
 
 - intent: repeat_seminar
-  examples:
+  examples: |
     - can i repeat the seminar?
     - may i do the seminar again for a better mark?
     - I got a mark 5. can i try again?
     - i would like to get a better mark. Am i allowed to participate again?
 
 - intent: sumbit_report
-  examples:
+  examples: |
     - how do i have to submit the report?
     - where should i sumbit my report?
     - where when and how should i submit my report?
@@ -210,14 +210,14 @@ nlu:
     - are there requirements for the file name of the report?
 
 - intent: attendence_compulsary
-  examples:
+  examples: |
     - is attendence compulsary?
     - what happens if i miss a lecture?
     - can i skip the lessons?
     - do i need to attend the lessons?
 
 - intent: topic_information
-  examples:
+  examples: |
     - i cant find information on my topic?
     - where can i find information on my topic?
     - how do i find literature for my topic?
