@@ -99,6 +99,10 @@ nlu:
     - how can i contact the tutor
     - is there an email contact?
     - who can i ask questions?
+    - i need help
+    - please help
+    - help
+    - pls help
 
 - intent: switch_topic
   examples: |
@@ -131,7 +135,7 @@ nlu:
     - whats the require page countof the report?
     - how much do i need to write?
 
-- intent: titelpage_information
+- intent: titlepage_information
   examples: |
     - what information should be placed on the title page?
     - how should the title page look?
