@@ -1,0 +1,20 @@
+Einleitung:
+Im Rahmen einer Forschung an der TU Chemnitz soll ein ChatBot für das FAQ im Kurs "Hauptseminar AUTOSAR Based Software Design" implementiert werden.
+Damit dieser ChatBot möglichst präzise auf Fragen antworten kann, ist ein breiter Fragenkatalog notwendig.
+
+Aufgabe:
+Ihr seid Teilnehmer am Kurs "Hauptseminar AUTOSAR Based Software Design" und kennt euch mit deisem Kurs gut aus.
+Ihr Ziel ist es mit allen möglichen Fragen an den ChatBot alle ihnen wichtige Informationen zum Kurs zu erhalten.
+In dieser Umfrage finden sie mehrere Stichwörter. Formulieren Sie bitte möglichst viele unterschiedliche Fragen (in Englisch) zu diesen Stichwörtern und ihre erwartete Antwort:
+- Beispiel 1: Stichwort: "Topic" --> Frage: "How can i change my topic?" --> erwartete Antwort: "Anleitung/Infos zum Themen-Wechsel"
+- Beispiel 2: Stichwort: "Topic" --> Frage: "list of topics" --> erwartete Antwort: "Verfügbare Themen anzeigen"
+
+Hinweis: Versetzen Sie sich bitte in die Situation, dass sie in einem Chat mit diesem ChatBot kommunizieren und formulieren Sie nur solche Fragen, welche Sie auch in solch einem Chat schreiben würden.
+
+Stichwörter:
+1. Organisation
+2. Topic
+3. Präsentation
+4. Report
+5. offene Fragen
+

@@ -28,6 +28,12 @@ intents:
   - topic_information
 
 responses:
+  utter_default:
+  - text: Sorry, I didn't get that.
+
+  utter_please_rephrase:
+  - text: I'm sorry, please rephrase!
+
   utter_greet:
   - text: "Hey! How are you?"
 
