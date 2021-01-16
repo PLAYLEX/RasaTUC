@@ -3,9 +3,45 @@
 Prototypische Realisierung eines Chatbots für eine Akzeptanzstudie im Hochschulkontext. <br>
 Weitere Informationen zur Projektaufgabe, zum Ablauf und zur Dokumentation [hier](*link*).
 
+## Inhaltsangabe:
+- [Was ist RasaTUC?](#was-ist-rasatuc)
+- [Wie ist das Projekt aufgebaut?](#wie-ist-das-projekt-aufgebaut)
+- [Wie kann man das Repository nutzen?](#wie-kann-man-dieses-repository-nutzen)
+- [Wie baut man eine Webseite mit Chatroom?](#wie-baut-man-eine-webseite-mit-chatroom)
+
 ## Was ist RasaTUC?
 RasaTUC ist ein ChatBot für das oben beschriebene Projektziel. Realisiert wird der ChatBot mit dem [RASA-Framework](https://rasa.com/docs/rasa/ "Rasa Open Source").<br>
 Das Einsatzgebiet von RasaTUC soll die [FAQ-Seite](https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/1508016135/CourseNode/93389955428421 "AUTOSAR-FAQ") vom Hauptseminar "AUTOSAR Based Software Design" sein.
+
+## Wie ist das Projekt aufgebaut?
+```text
+project/
+├── .git/                           SCM (Source Control Management)
+│   └── ...
+├── docs/                           Dokumente und Aufgabenstellung
+│   └── ...
+├── front-end/
+│   ├── Chatroom.css                kompiliertes Stylesheet
+│   ├── Chatroom.js                 kompiliertes Javascript
+│   └── RasaTUC-ChatRoom.html       Webseite
+├── rasa/
+│   ├── actions/
+│   │   └── actions.py              Optionale actions
+│   ├── data/
+│   │   ├── nlu.yml                 Definition von Inhalten für den Chatbot
+│   │   ├── rules.yml               Regeln für das Verhalten vom Chatbot
+│   │   └── stories.yml             Erwartete Abläufe von Chats
+│   ├── models/                     Generierten Modelle
+│   │   └── ...
+│   ├── tests/                      Erstellte test-stories
+│   │   └── ...
+│   ├── config.yml                  Konfiguration um die Modelle zu trainieren
+│   ├── credentials.yml             Registrierung fremder Applikationen
+│   ├── domain.yml                  Initialisierung des Chatbots
+│   └── endpoints.yml               Schnittstellen (API)
+├── .gitignore                Zu Ignorierende Dateien
+└── README.md                 <-
+```
 
 ## Wie kann man dieses Repository nutzen?
 Bevor man einfach das Repository cloned muss man die Umgebung auf seiner lokalen Workstation einrichten.
@@ -130,7 +166,7 @@ Bevor man einfach das Repository cloned muss man die Umgebung auf seiner lokalen
         ```
     - Bedeutung der Parameter:
         - `-vv` = In der Konsole werden Debug-Informationen angezeigt.
-        - `--cors "*"` = Aktuell werden die JavaScripte im HTML-File von einem fremden Server bezogen.
+        - `--cors "*"` = Cross-Origin Resource Sharing (vermutlich, weil Rasa und Webseite eigenen Port haben).
 - Jetzt einen eigenen Server für die HTML-Webseite starten:
     - Navigieren zum HTML-Verzeichnis *(im Ordner `front-end`)*
         ``` markdown
@@ -138,3 +174,5 @@ Bevor man einfach das Repository cloned muss man die Umgebung auf seiner lokalen
         ```
     - Somit läuft jetzt Rasa und die Webseite auf unterschiedlichen Ports und interagieren über das JavaScript (Chatroom).
         - Seite hier abrufen: `localhost:8000`
+
+## Wie baut man eine Webseite mit Chatroom?
