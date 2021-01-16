@@ -39,8 +39,10 @@ project/
 │   ├── credentials.yml             Registrierung fremder Applikationen
 │   ├── domain.yml                  Initialisierung des Chatbots
 │   └── endpoints.yml               Schnittstellen (API)
-├── .gitignore                Zu Ignorierende Dateien
-└── README.md                 <-
+├── venv/                           Virtuelle Umgebung von Java
+│   └── ...
+├── .gitignore                      Zu Ignorierende Dateien
+└── README.md                       <-
 ```
 
 ## Wie kann man dieses Repository nutzen?
