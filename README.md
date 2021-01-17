@@ -169,6 +169,8 @@ Bevor man einfach das Repository cloned muss man die Umgebung auf seiner lokalen
     - Bedeutung der Parameter:
         - `-vv` = In der Konsole werden Debug-Informationen angezeigt.
         - `--cors "*"` = Cross-Origin Resource Sharing (vermutlich, weil Rasa und Webseite eigenen Port haben).
+
+- **Sofern eine Webseite schon [eingerichtet](#wie-baut-man-eine-webseite-mit-chatroom) ist:**
 - Jetzt einen eigenen Server für die HTML-Webseite starten:
     - Navigieren zum HTML-Verzeichnis *(im Ordner `front-end`)*
         ``` markdown
@@ -178,3 +180,82 @@ Bevor man einfach das Repository cloned muss man die Umgebung auf seiner lokalen
         - Seite hier abrufen: `localhost:8000`
 
 ## Wie baut man eine Webseite mit Chatroom?
+- Theoretisch alle Informationen auf der [Herstellerseite](https://github.com/scalableminds/chatroom).
+- Um eine eigene Webseite mit Chatroom als Javascript zu erstellen, gibt es zwei Möglichkeiten:
+    - [S3 Hosted Version (Fremdbezug)](#1-s3-hosted-version)
+    - [Eigene Javascript und Stylesheet (Selbstgebaut)](#2-eigenes-build)
+### 1. S3 Hosted Version
+- Diese Möglichkeit ist die einfachste, aber gelegentlich nicht die sicherste, weil man:
+    - vertrauen muss, dass der Fremdserver immer läuft und funktioniert,
+    - keine Kontrolle über den Fremdserver hat,
+    - tendenziell Sicherheitslücken möglich sind.
+
+- Um diese Möglichkeit zu verwenden, muss man folgende Schritte machen:
+    - Eine eigene HTML-Seite erstellen.
+    - Im Kopf das externe Stylesheet verlinken:
+        ``` html
+        <head>
+          <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+        </head>
+        ```
+    - Im Body das Javascript verlinken und beschreiben:
+        ``` html
+        <body>
+            <div class="chat-container"></div>
+            <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"></script>
+            <script type="text/javascript">
+                var chatroom = new window.Chatroom({
+                    host: "http://localhost:5005",
+                    title: "Chat with RasaTUC",
+                    container: document.querySelector(".chat-container"),
+                    welcomeMessage: "I'm the Rasa FAQ Chatbot for TU Chemnitz. Try to chat with me!",
+                    // speechRecognition: "en-US",
+                    // voiceLang: "en-US"
+                });
+                chatroom.openChat();
+            </script>
+        </body>
+        ```
+        - `speechRecognition` und `voiceLang` sind absichtlich auskommentiert, weil unnötig.
+    - Jetzt den [Server starten](#4-server-starten) und es läuft.
+### 2. Eigenes Build
+- Diese Möglichkeit ist etwas aufwendiger, weil man:
+    - das Hersteller-Projekt selbst bauen soll,
+    - dafür eigene Javascript und Stylesheet erstellt,
+    - mehr Kontrolle über die Verfügbarkeit hat.
+
+- Um diese Möglichkeit zu verwenden, muss man folgende Schritte machen:
+    - Zuerst das Chatroom-Projekt von der Hersteller-Seite besorgen: [Latest Release](https://github.com/scalableminds/chatroom/releases)
+    - Die Zip lokal entpacken.
+    - Mit yarn das entpackte Projekt installieren und bauen:
+        ``` markdown
+        yarn install
+        yarn build
+        ```
+    - Danach entsteht ein Ordner `dist` mit den kompilierten Javascript und Stylesheet.
+    - Diese dann in der Webseite verwenden:
+        ``` html
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <link rel="stylesheet" href="Chatroom.css" />
+        </head>
+        <body>
+            <div class="chat-container"></div>
+            <script src="Chatroom.js"></script>
+            <script type="text/javascript">
+                var chatroom = new window.Chatroom({
+                    host: "http://localhost:5005",
+                    title: "Chat with RasaTUC",
+                    container: document.querySelector(".chat-container"),
+                    welcomeMessage: "I'm the Rasa FAQ Chatbot for TU Chemnitz. Try to chat with me!",
+                    // speechRecognition: "en-US",
+                    // voiceLang: "en-US"
+                });
+                chatroom.openChat();
+            </script>
+        </body>
+        </html>
+        ```
+        - `speechRecognition` und `voiceLang` sind absichtlich auskommentiert, weil unnötig.
+    - Jetzt den [Server starten](#4-server-starten) und es läuft.
