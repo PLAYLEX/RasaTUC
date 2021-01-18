@@ -8,8 +8,32 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - questions_where
+  - switch_topic
+  - change_appointment
+  - good_report
+  - how_long
+  - titlepage_information
+  - sickness_presentationday
+  - end_seminar
+  - presentation_last_semester
+  - own_topic
+  - intership
+  - course_full
+  - deadline_for_submissions
+  - presentation_template
+  - repeat_seminar
+  - submit_report
+  - attendence_compulsary
+  - topic_information
 
 responses:
+  utter_default:
+  - text: Sorry, I didn't get that.
+
+  utter_please_rephrase:
+  - text: I'm sorry, please rephrase!
+
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -38,7 +62,8 @@ responses:
   utter_another_question:
   - text: "Do you have another Question?"
 
-
+  utter_q0:
+  - text: "Read this FAQ. If you doesn't get your information here, you can write a E-Mail to ce-teaching@informatik.tu-chemnitz.de."
 
 session_config:
   session_expiration_time: 60

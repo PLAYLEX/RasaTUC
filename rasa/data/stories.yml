@@ -22,3 +22,8 @@ stories:
   - action: utter_another_question
   - intent: deny
   - action: utter_goodbye
+
+- story: Question 0
+  steps:
+  - intent: questions_where
+  - action: utter_q0
