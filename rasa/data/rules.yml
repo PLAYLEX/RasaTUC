@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: topic 1
+  steps:
+  - intent: topic_1
+  - action: utter_answer_1

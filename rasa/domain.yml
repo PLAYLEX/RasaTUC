@@ -29,6 +29,17 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_iam:
+  - text: "I can answer your Questions about the Seminar."
+
+  utter_what_question:
+  - text: "What would you like to ask?"
+
+  utter_another_question:
+  - text: "Do you have another Question?"
+
+
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
