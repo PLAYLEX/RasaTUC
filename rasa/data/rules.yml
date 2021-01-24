@@ -12,7 +12,97 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: topic 1
+- rule: rule 1
   steps:
-  - intent: topic_1
-  - action: utter_answer_1
+  - intent: switch_topic
+  - action: utter_no_switching
+
+- rule: rule 2
+  steps:
+  - intent: change_appointment
+  - action: utter_no_changing
+
+- rule: rule 3
+  steps:
+  - intent: good_report
+  - action: utter_templates
+
+- rule: rule 4
+  steps:
+  - intent: how_long
+  - action: utter_number_of_pages
+
+- rule: rule 5
+  steps:
+  - intent: titelpage_information
+  - action: utter_titlepage_list
+
+- rule: rule 6
+  steps:
+  - intent: sickness_presentationday
+  - action: utter_sickday
+
+- rule: rule 7
+  steps:
+  - intent: presentation_last_semester
+  - action: utter_mark_5
+
+- rule: rule 8
+  steps:
+  - intent: own_topic
+  - action: utter_no_lazy
+
+- rule: rule 9
+  steps:
+  - intent: internship
+  - action: utter_yes_new_topic
+
+- rule: rule 10
+  steps:
+  - intent: course_full
+  - action: utter_yes_internship
+
+- rule: rule 11
+  steps:
+  - intent: deadline_for_submissions
+  - action: utter_no_full
+
+- rule: rule 12
+  steps:
+  - intent: presentation_template
+  - action: utter_appointments
+
+- rule: rule 13
+  steps:
+  - intent: repeat_seminar
+  - action: utter_no_repeat
+
+- rule: rule 14
+  steps:
+  - intent: sumbit_report
+  - action: utter_how_to_report
+
+- rule: rule 15
+  steps:
+  - intent: attendence_compulsary
+  - action: utter_yes_attendance
+
+- rule: rule 16
+  steps:
+  - intent: topic_information
+  - action: utter_where_to_google
+
+- rule: rule 17
+  steps:
+  - intent: course_schedule
+  - action: utter_schedule
+
+- rule: rule 18
+  steps:
+  - intent: presentation_time
+  - action: utter_presentation_time
+
+- rule: rule 19
+  steps:
+  - intent: topic_selection
+  - action: utter_topic_list
