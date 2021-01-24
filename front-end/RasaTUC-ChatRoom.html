@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Chatroom.css" />
+</head>
+<body>
+    <div class="chat-container"></div>
+
+    <script src="Chatroom.js"></script>
+    <script type="text/javascript">
+        var chatroom = new window.Chatroom({
+            host: "http://localhost:5005",
+            title: "Chat with RasaTUC",
+            container: document.querySelector(".chat-container"),
+            welcomeMessage: "I'm the Rasa FAQ Chatbot for TU Chemnitz. Try to chat with me!",
+            // speechRecognition: "en-US",
+            // voiceLang: "en-US"
+        });
+        chatroom.openChat();
+    </script>
+</body>
+</html>

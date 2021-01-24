@@ -19,7 +19,7 @@ intents:
   - own_topic
   - internship
   - course_full
-  - deadline_for_submissions
+  - deadlines
   - presentation_template
   - repeat_seminar
   - sumbit_report
@@ -31,6 +31,12 @@ intents:
 
 
 responses:
+  utter_default:
+  - text: Sorry, I didn't get that.
+
+  utter_please_rephrase:
+  - text: I'm sorry, please rephrase!
+
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -111,10 +117,10 @@ responses:
   - text: "In the 1st place it is in your responsibility to search and to find literature regarding your topic. This is a mandatory task of your research project in this seminar and your master thesis. Take a look on https://scholar.google.com/ or http://ieeexplore.ieee.org/Xplore/guesthome.jsp. If you doesn't find anything look at the library etc. The last chance for you is to ask your supervisor, but if they help you with this issue, your mark will be decreased."
 
   utter_schedule:
-  - text: "You can find the schedule for the lectures and tutorials here: MISSING LINK"
+  - text: "You can find the schedule for the lectures and tutorials here: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/1508016135/CourseNode/93389955959771?3"
 
   utter_presentation_time:
-  - text: "The presentation should take 10 minutes for each student and 5 minutes discussion afterwards"
+  - text: "The presentation should take 20 minutes for each student and 10 minutes discussion afterwards"
 
   utter_topic_list:
   - text: "You can find a list of all available topics here: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/1508016135/CourseNode/101457862757526"
