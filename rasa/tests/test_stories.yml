@@ -2,90 +2,257 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
-- story: happy path 1
+- story: first question 1
   steps:
   - user: |
       hello there!
     intent: greet
   - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+  - action: utter_iam
+  - action: utter_what_question
 
-- story: happy path 2
+- story: more questions 1
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+      thx
+    intent: thanks
+  - action: utter_another_question
   - user: |
       yes
     intent: affirm
-  - action: utter_happy
+  - action: utter_what_question
 
-- story: sad path 2
+- story: no more questions 1
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
+      thx
+    intent: thanks
+  - action: utter_another_question
   - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
+      nope
     intent: deny
   - action: utter_goodbye
 
-- story: sad path 3
+- story: goodbye 1
   steps:
   - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
-
-- story: say goodbye
-  steps:
-  - user: |
-      bye-bye!
+      bye
     intent: goodbye
   - action: utter_goodbye
 
-- story: bot challenge
+- story: challenge bot 1
   steps:
   - user: |
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+
+- story: questions_where 1
+  steps:
+  - user: |
+      i have questions
+    intent: questions_where
+  - action: utter_info_email
+
+- story: switch_topic 1
+  steps:
+  - user: |
+      how can i switch my topic?
+    intent: switch_topic
+  - action: utter_no_switching
+
+- story: switch_topic 2
+  steps:
+  - user: |
+      change my topic
+    intent: switch_topic
+  - action: utter_no_switching
+
+- story: change_appointment 1
+  steps:
+  - user: |
+      i want change my presentation date
+    intent: change_appointment
+  - action: utter_no_changing
+
+- story: good_report 1
+  steps:
+  - user: |
+      what does a good report look like?
+    intent: good_report
+  - action: utter_templates
+
+- story: good_report 2
+  steps:
+  - user: |
+      how should i design my report
+    intent: good_report
+  - action: utter_templates
+
+- story: how_long 1
+  steps:
+  - user: |
+      how much i need to write?
+    intent: how_long
+  - action: utter_number_of_pages
+
+- story: titlepage_information 1
+  steps:
+  - user: |
+      how should the title page look?
+    intent: titlepage_information
+  - action: utter_titlepage_list
+
+- story: titlepage_information 2
+  steps:
+  - user: |
+      what content is necessary on the titlepage?
+    intent: titlepage_information
+  - action: utter_titlepage_list
+
+- story: sickness_presentationday 1
+  steps:
+  - user: |
+      what should i do, if i sick on presentation date?
+    intent: sickness_presentationday
+  - action: utter_sickday
+
+- story: sickness_presentationday 2
+  steps:
+  - user: |
+      what happens when i am sick
+    intent: sickness_presentationday
+  - action: utter_sickday
+
+- story: end_seminar 1
+  steps:
+  - user: |
+      can i leave the siminar?
+    intent: end_seminar
+  - action: utter_mark_5
+
+- story: end_seminar 2
+  steps:
+  - user: |
+      can i leave the course?
+    intent: end_seminar
+  - action: utter_mark_5
+
+- story: presentation_last_semester 1
+  steps:
+  - user: |
+      i already did my presentation last semester
+    intent: presentation_last_semester
+  - action: utter_no_lazy
+
+- story: presentation_last_semester 2
+  steps:
+  - user: |
+      i did my presentation in the past
+    intent: presentation_last_semester
+  - action: utter_no_lazy
+
+- story: own_topic 1
+  steps:
+  - user: |
+      can i choose my own topic?
+    intent: own_topic
+  - action: utter_yes_new_topic
+
+- story: internship 1
+  steps:
+  - user: |
+      i am intern. what to do?
+    intent: internship
+  - action: utter_yes_internship
+
+- story: course_full 1
+  steps:
+  - user: |
+      the course is full. what can i do?
+    intent: course_full
+  - action: utter_no_full
+
+- story: course_full 2
+  steps:
+  - user: |
+      what can i do, when the seminar is full?
+    intent: course_full
+  - action: utter_no_full
+
+- story: deadlines 1
+  steps:
+  - user: |
+      when is the deadline?
+    intent: deadlines
+  - action: utter_appointments
+
+- story: presentation_template 1
+  steps:
+  - user: |
+      how should the presentation look like?
+    intent: presentation_template
+  - action: utter_only_template
+
+- story: repeat_seminar 1
+  steps:
+  - user: |
+      can i repeat the seminar?
+    intent: repeat_seminar
+  - action: utter_no_repeat
+
+- story: repeat_seminar 2
+  steps:
+    - user: |
+        can i repeat the course?
+      intent: repeat_seminar
+    - action: utter_no_repeat
+
+- story: submit_report 1
+  steps:
+  - user: |
+      where can i submit my report?
+    intent: submit_report
+  - action: utter_how_to_report
+
+- story: submit_report 2
+  steps:
+    - user: |
+        where is the submission
+      intent: submit_report
+    - action: utter_how_to_report
+
+- story: attendance_compulsary 1
+  steps:
+    - user: |
+        What happens when i miss the lecture?
+      intent: attendance_compulsary
+    - action: utter_yes_attendance
+
+- story: topic_information 1
+  steps:
+  - user: |
+      where can i find information about my topic?
+    intent: topic_information
+  - action: utter_where_to_google
+
+- story: course_schedule 1
+  steps:
+  - user: |
+      what time is the lecture?
+    intent: course_schedule
+  - action: utter_schedule
+
+- story: presentation_time 1
+  steps:
+  - user: |
+      how long should the presentation be?
+    intent: presentation_time
+  - action: utter_presentation_time
+
+- story: topic_selection 1
+  steps:
+  - user: |
+      what are the topics?
+    intent: topic_selection
+  - action: utter_topic_list

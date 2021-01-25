@@ -229,7 +229,7 @@ nlu:
     - I got a mark 5. can i try again?
     - i would like to get a better mark. Am i allowed to participate again?
 
-- intent: sumbit_report
+- intent: submit_report
   examples: |
     - how do i have to submit the report?
     - where should i sumbit my report?
@@ -239,9 +239,9 @@ nlu:
     - Where do I have to hand in the report? 
     - Do i submit a Hardcopy or softcopy of my report? 
 
-- intent: attendence_compulsary
+- intent: attendance_compulsary
   examples: |
-    - is attendence compulsary?
+    - is attendance compulsary?
     - what happens if i miss a lecture?
     - can i skip the lessons?
     - do i need to attend the lessons?
