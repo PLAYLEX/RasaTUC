@@ -94,7 +94,7 @@ rules:
 
 - rule: rule 15
   steps:
-  - intent: sumbit_report
+  - intent: submit_report
   - action: utter_how_to_report
 
 - rule: rule 16

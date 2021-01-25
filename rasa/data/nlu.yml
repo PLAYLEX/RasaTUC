@@ -229,7 +229,7 @@ nlu:
     - I got a mark 5. can i try again?
     - i would like to get a better mark. Am i allowed to participate again?
 
-- intent: sumbit_report
+- intent: submit_report
   examples: |
     - how do i have to submit the report?
     - where should i sumbit my report?
