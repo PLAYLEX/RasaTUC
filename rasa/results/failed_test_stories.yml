@@ -1,0 +1,48 @@
+version: "2.0"
+stories:
+- story: good_report 2 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: good_report  # predicted: how_long: how should i design my report
+  - action: utter_templates
+- story: titlepage_information 2 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: titlepage_information  # predicted: nlu_fallback: what content is necessary on the titlepage?
+  - action: utter_titlepage_list
+- story: sickness_presentationday 1 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: sickness_presentationday  # predicted: nlu_fallback: what should i do, if i sick on presentation date?
+  - action: utter_sickday
+- story: sickness_presentationday 2 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: sickness_presentationday  # predicted: course_schedule: what happens when i am sick
+  - action: utter_sickday
+- story: presentation_last_semester 2 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: presentation_last_semester  # predicted: change_appointment: i did my presentation in the past
+  - action: utter_no_lazy
+- story: course_full 2 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: course_full  # predicted: end_seminar: what can i do, when the seminar is full?
+  - action: utter_no_full
+- story: presentation_template 1 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: presentation_template  # predicted: change_appointment: how should the presentation look like?
+  - action: utter_only_template
+- story: submit_report 2 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: submit_report  # predicted: deadlines: where is the submission
+  - action: utter_how_to_report
+- story: attendance_compulsary 1 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: attendance_compulsary  # predicted: course_schedule: What happens when i miss the lecture?
+  - action: utter_yes_attendance
+- story: no more questions 1 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: thanks
+  - action: utter_another_question
+  - intent: deny  # predicted: nlu_fallback: nope
+  - action: utter_goodbye
+- story: switch_topic 2 (C:\Users\playe\AppData\Local\Temp\tmpztl5z3fk\abee9bf555bc4b8287984d2b5785b5a1_test_stories.yml)
+  steps:
+  - intent: switch_topic  # predicted: nlu_fallback: change my topic
+  - action: utter_no_switching
