@@ -140,8 +140,7 @@ nlu:
     - Should i use a standard template ? 
     - Where can i find report/presentation template 
     - Where I find the presentation template? 
-    - Where I find the report template? 
-
+    - Where I find the report template?
 
 - intent: how_long
   examples: |
@@ -153,7 +152,7 @@ nlu:
     - How many pages does the report have to have? 
     - How long should my report be ?  
 
-- intent: titelpage_information
+- intent: titlepage_information
   examples: |
     - what information should be placed on the title page?
     - how should the title page look?
@@ -163,7 +162,7 @@ nlu:
 - intent: sickness_presentationday
   examples: |
     - what should i do if i get sick on my presentation day?
-    - i am ill and my presentation is towmorrow. what do i do?
+    - i am ill and my presentation is tomorrow. what do i do?
     - what can i do if i am ill at the presentation day?
     - what do i need to do if i cant hold my presentation due to illness?
 
@@ -190,7 +189,6 @@ nlu:
     - how can i submit my own topic?
     - Can i propose a new topic
 
-
 - intent: internship
   examples: |
     - are there problems because i am in my intern ship?
@@ -215,8 +213,7 @@ nlu:
     - Until when do I have to choose my topic? 
     - What is the submission deadline?  
     - what is the deadline for changing topics 
-    - When is the submission time? 
-
+    - When is the submission time?
 
 - intent: presentation_template
   examples: |

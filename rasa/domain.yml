@@ -5,6 +5,7 @@ intents:
   - goodbye
   - affirm
   - deny
+  - thanks
   - mood_great
   - mood_unhappy
   - bot_challenge
@@ -13,8 +14,9 @@ intents:
   - change_appointment
   - good_report
   - how_long
-  - titelpage_information
+  - titlepage_information
   - sickness_presentationday
+  - end_seminar
   - presentation_last_semester
   - own_topic
   - internship
@@ -103,6 +105,9 @@ responses:
 
   utter_appointments:
   - text: "You find the deadlines and all important appointments here: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/1508016135/CourseNode/93389955959771?3"
+
+  utter_only_template:
+  - text: "Here the template: https://www.tu-chemnitz.de/informatik/ce/lectures/master.php.en#template"
 
   utter_no_repeat:
   - text: "You can/must repeat the Hauptseminar, if you end it with a mark 5. If you successfully ended the seminar, you can't repeat it, in order to archive a better Mark!"
