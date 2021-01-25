@@ -2,34 +2,28 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: first question
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - action: utter_iam
+  - action: utter_what_question
 
-- story: sad path 1
+- story: more questions
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: thanks
+  - action: utter_another_question
   - intent: affirm
-  - action: utter_happy
+  - action: utter_what_question
 
-- story: sad path 2
+- story: no more questions
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: thanks
+  - action: utter_another_question
   - intent: deny
   - action: utter_goodbye
 
-- story: Question 0
+- story: User is thankfull
   steps:
-  - intent: questions_where
-  - action: utter_q0
+  - intent: thanks
+  - action: utter_happy

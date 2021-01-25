@@ -5,6 +5,7 @@ intents:
   - goodbye
   - affirm
   - deny
+  - thanks
   - mood_great
   - mood_unhappy
   - bot_challenge
@@ -18,14 +19,18 @@ intents:
   - end_seminar
   - presentation_last_semester
   - own_topic
-  - intership
+  - internship
   - course_full
-  - deadline_for_submissions
+  - deadlines
   - presentation_template
   - repeat_seminar
-  - submit_report
+  - sumbit_report
   - attendence_compulsary
   - topic_information
+  - course_schedule
+  - presentation_time
+  - topic_selection
+
 
 responses:
   utter_default:
@@ -53,8 +58,78 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_q0:
-  - text: "Read this FAQ. If you doesn't get your information here, you can write a E-Mail to ce-teaching@informatik.tu-chemnitz.de."
+  utter_iam:
+  - text: "I can answer your Questions about the Seminar."
+
+  utter_what_question:
+  - text: "What would you like to ask?"
+
+  utter_another_question:
+  - text: "Do you have another Question?"
+
+  utter_info_email:
+  - text: "If you doesn't get your information from me, you can write a E-Mail to ce-teaching@informatik.tu-chemnitz.de"
+
+  utter_no_switching:
+  - text: "You are just allowed to switch your Topic during the registration time, after that no switching is allowed!"
+
+  utter_no_changing:
+  - text: "Your get your presentation appointment from your supervisor, the date and time are fixed and can't be changed! If you are working, or you have other appointments you have to take care that you can maintain your lessons"
+
+  utter_templates:
+  - text: "A good report looks like a Master Thesis, just shorter! Please use the Templates from: \n for MS Word: https://www.tu-chemnitz.de/informatik/ce/lectures/master.php.en#template \n for Latex: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/1508016135/CourseNode/85620866361075 \n Don't forget a Table of Content, a list of Figures etc... That's all a part of a good report! \n Never copy paste!! Write your text with your own words, and reference the content! \n Use your references as described in the lesson! \n   - correct citing \n   - correct referencing \n An layout example report can be found here: \n https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/1508016135/CourseNode/85620866361075"
+
+  utter_number_of_pages:
+  - text: "Your report should comprise 10 to 15 pages of content! That means without title page, list of figures, references, etc."
+
+  utter_titlepage_list:
+  - text: "1) Title of your work \n 2) Supervisor \n 3) Author name \n 4) Your Matrikel Number/Student ID \n 5) Date of submission"
+
+  utter_sickday:
+  - text: "First of all you have to write a Mail to your course leader, as soon as possible (if possible 24h before)! After that you have to provide a medical certificate from a doctor in Chemnitz or near region, after a maximum of 3 days. \n If possible, your course leader will give you a new presentation appointment."
+
+  utter_mark_5:
+  - text: "You can end the seminar every time with mark 5."
+
+  utter_no_lazy:
+  - text: "No, you have to register again and start with a new topic!"
+
+  utter_yes_new_topic:
+  - text: "Yes it is possible. For this you have to write a proposal of minimum 1 page about your topic and provide high scientific starting literature (paper, journals, etc.), at least a minimum of 5. In your proposal you have to explain, why your topic is important to discuss, what questions you want to solve and what your own contribution will be."
+
+  utter_yes_internship:
+  - text: "Yes, but you have to register in the determined group, and you have to prepare at the beginning of the semester a copy of your internship contract. Afterwards you have to take care, that you can take part at your assigned appointment. There will be no exception, because of your internship."
+
+  utter_no_full:
+  - text: "If the course is full, it is full. There will be no new slots provided! You can just register on the waiting list for 1 course!"
+
+  utter_appointments:
+  - text: "You find the deadlines and all important appointments here: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/1508016135/CourseNode/93389955959771?3"
+
+  utter_only_template:
+  - text: "Here the template: https://www.tu-chemnitz.de/informatik/ce/lectures/master.php.en#template"
+
+  utter_no_repeat:
+  - text: "You can/must repeat the Hauptseminar, if you end it with a mark 5. If you successfully ended the seminar, you can't repeat it, in order to archive a better Mark!"
+
+  utter_how_to_report:
+  - text: 'There are 3 points that you have to take care: \n 1) Submit it to the correct E-Mail address and before the deadline \n 2) The correct file format \n 3) The report has to be named correctly \n You have to sent the report to ce-teaching@informatik.tu-chemnitz.de with the title "Report submission<Semester><Year>" (for example: Report submission SS2016). You will get an automatically generated response, this shows you that the report was submitted! it is not necessary to submit the report 2 Times, just in case something went wrong! \n The report it self has to be submitted as PDF-File, we dont accept Word-files or Latex-Files. \n The name of the report has to be as followed: "<your name>_<yourMatrikel Number/Studentid>.pdf" for example:albert_einstein_111222.pdf Please take care that you dont insert spezial character or whitespaces.'
+
+  utter_yes_attendance:
+  - text: "In general, you have to participate in all lessons in your group. If you cant participate 1 time in this group it is fine if you go to another lesson in the same week. You are allowed to miss a most of 2 lessons. However, the day of your presentation is fix, you have to take care that you can participate on this day in your group!"
+
+  utter_where_to_google:
+  - text: "In the 1st place it is in your responsibility to search and to find literature regarding your topic. This is a mandatory task of your research project in this seminar and your master thesis. Take a look on https://scholar.google.com/ or http://ieeexplore.ieee.org/Xplore/guesthome.jsp. If you doesn't find anything look at the library etc. The last chance for you is to ask your supervisor, but if they help you with this issue, your mark will be decreased."
+
+  utter_schedule:
+  - text: "You can find the schedule for the lectures and tutorials here: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/1508016135/CourseNode/93389955959771?3"
+
+  utter_presentation_time:
+  - text: "The presentation should take 20 minutes for each student and 10 minutes discussion afterwards"
+
+  utter_topic_list:
+  - text: "You can find a list of all available topics here: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/1508016135/CourseNode/101457862757526"
+
 
 session_config:
   session_expiration_time: 60
