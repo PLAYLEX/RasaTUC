@@ -239,9 +239,9 @@ nlu:
     - Where do I have to hand in the report? 
     - Do i submit a Hardcopy or softcopy of my report? 
 
-- intent: attendence_compulsary
+- intent: attendance_compulsary
   examples: |
-    - is attendence compulsary?
+    - is attendance compulsary?
     - what happens if i miss a lecture?
     - can i skip the lessons?
     - do i need to attend the lessons?

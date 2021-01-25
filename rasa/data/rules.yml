@@ -99,7 +99,7 @@ rules:
 
 - rule: rule 16
   steps:
-  - intent: attendence_compulsary
+  - intent: attendance_compulsary
   - action: utter_yes_attendance
 
 - rule: rule 17
