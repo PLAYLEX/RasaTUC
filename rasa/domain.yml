@@ -24,8 +24,8 @@ intents:
   - deadlines
   - presentation_template
   - repeat_seminar
-  - sumbit_report
-  - attendence_compulsary
+  - submit_report
+  - attendance_compulsary
   - topic_information
   - course_schedule
   - presentation_time

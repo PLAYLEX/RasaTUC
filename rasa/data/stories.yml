@@ -22,8 +22,3 @@ stories:
   - action: utter_another_question
   - intent: deny
   - action: utter_goodbye
-
-- story: User is thankfull
-  steps:
-  - intent: thanks
-  - action: utter_happy
