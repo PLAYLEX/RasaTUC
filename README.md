@@ -164,11 +164,11 @@ Bevor man einfach das Repository cloned muss man die Umgebung auf seiner lokalen
 - Zuerst Rasa selbst als Server ausführen:
     - Navigieren zum Rasa-Verzeichnis *(dort, wo die `config.yml` sich befindet)*
         ``` markdown
-        rasa run -vv --cors "*"
+        rasa run -vv --cors "http://localhost:8000"
         ```
     - Bedeutung der Parameter:
         - `-vv` = In der Konsole werden Debug-Informationen angezeigt.
-        - `--cors "*"` = Cross-Origin Resource Sharing (vermutlich, weil Rasa und Webseite eigenen Port haben).
+        - `--cors "http://localhost:8000"` = Cross-Origin Resource Sharing (vermutlich, weil Rasa und Webseite eigenen Port haben).
 
 - **Sofern eine Webseite schon [eingerichtet](#wie-baut-man-eine-webseite-mit-chatroom) ist:**
 - Jetzt einen eigenen Server für die HTML-Webseite starten:
