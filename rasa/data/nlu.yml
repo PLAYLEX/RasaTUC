@@ -274,3 +274,7 @@ nlu:
     - Which topics are available? 
     - What topics can i choose?
     - whats my topic?
+
+- intent: error_trigger
+  examples: |
+    - !wrong!

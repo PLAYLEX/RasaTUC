@@ -121,3 +121,8 @@ rules:
   steps:
   - intent: topic_selection
   - action: utter_topic_list
+
+- rule: error_rule
+  steps:
+    - intent: error_trigger
+    - action: action_wrong_message

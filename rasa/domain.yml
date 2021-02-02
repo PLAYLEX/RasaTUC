@@ -30,6 +30,7 @@ intents:
   - course_schedule
   - presentation_time
   - topic_selection
+  - error_trigger
 
 
 responses:
@@ -130,6 +131,8 @@ responses:
   utter_topic_list:
   - text: "You can find a list of all available topics here: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/1508016135/CourseNode/101457862757526"
 
+actions:
+  - action_wrong_message
 
 session_config:
   session_expiration_time: 60
