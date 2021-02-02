@@ -26,19 +26,23 @@ project/
 │   └── RasaTUC-ChatRoom.html       Webseite
 ├── rasa/
 │   ├── actions/
-│   │   └── actions.py              Optionale actions
+│   │   └── actions.py              Optionale actions (action_wrong_message)
 │   ├── data/
 │   │   ├── nlu.yml                 Definition von Inhalten für den Chatbot
 │   │   ├── rules.yml               Regeln für das Verhalten vom Chatbot
 │   │   └── stories.yml             Erwartete Abläufe von Chats
 │   ├── models/                     Generierten Modelle
 │   │   └── ...
+│   ├── results/                    Ergebnisse vom letzten Test
+│   │   └── ...
 │   ├── tests/                      Erstellte test-stories
 │   │   └── ...
 │   ├── config.yml                  Konfiguration um die Modelle zu trainieren
 │   ├── credentials.yml             Registrierung fremder Applikationen
+│   ├── data.json                   Ansammlung von User-markierten falschen Antworten (action_wrong_message)
 │   ├── domain.yml                  Initialisierung des Chatbots
-│   └── endpoints.yml               Schnittstellen (API)
+│   ├── endpoints.yml               Schnittstellen (API)
+│   └── rasa.log                    Normales Rasa-Log-File
 ├── venv/                           Virtuelle Umgebung von Java
 │   └── ...
 ├── .gitignore                      Zu Ignorierende Dateien
@@ -164,11 +168,12 @@ Bevor man einfach das Repository cloned muss man die Umgebung auf seiner lokalen
 - Zuerst Rasa selbst als Server ausführen:
     - Navigieren zum Rasa-Verzeichnis *(dort, wo die `config.yml` sich befindet)*
         ``` markdown
-        rasa run -vv --cors "http://localhost:8000"
+        rasa run -vv --cors "http://localhost:8000" --log-file rasa.log
         ```
     - Bedeutung der Parameter:
         - `-vv` = In der Konsole werden Debug-Informationen angezeigt.
-        - `--cors "http://localhost:8000"` = Cross-Origin Resource Sharing (vermutlich, weil Rasa und Webseite eigenen Port haben).
+        - `--cors "http://localhost:8000"` = Cross-Origin Resource Sharing (nur Webseite erlaubt).
+        - `--log-file rasa.log` = Normales loggen von allen Rasa-Server-Events
 
 - **Sofern eine Webseite schon [eingerichtet](#wie-baut-man-eine-webseite-mit-chatroom) ist:**
 - Jetzt einen eigenen Server für die HTML-Webseite starten:
@@ -178,6 +183,14 @@ Bevor man einfach das Repository cloned muss man die Umgebung auf seiner lokalen
         ```
     - Somit läuft jetzt Rasa und die Webseite auf unterschiedlichen Ports und interagieren über das JavaScript (Chatroom).
         - Seite hier abrufen: `localhost:8000`
+    
+- **Sofern der Rasa-Action-Server notwendig ist:**
+- Jetzt einen eigenen (Rasa definierten) Server starten:
+    - Navigieren zum Rasa-Verzeichnis *(dort, wo die `config.yml` sich befindet)*
+        ``` markdown
+        rasa run actions
+        ```
+    - Somit läuft ein Action-Server, welcher Actions als Dienste anbietet. Die Adresse ist in `endpoints.yml` definiert.
 
 ## Wie baut man eine Webseite mit Chatroom?
 - Theoretisch alle Informationen auf der [Herstellerseite](https://github.com/scalableminds/chatroom).
