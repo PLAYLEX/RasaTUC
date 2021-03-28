@@ -1,7 +1,7 @@
 # Teampraktikum - ChatBot: RasaTUC
 ## Was ist das Projektziel?
 Prototypische Realisierung eines Chatbots für eine Akzeptanzstudie im Hochschulkontext. <br>
-Weitere Informationen zur Projektaufgabe, zum Ablauf und zur Dokumentation [hier](*link*).
+Weitere Informationen zur Projektaufgabe, zum Ablauf und zur Dokumentation [hier](https://github.com/PLAYLEX/RasaTUC/tree/main/docs).
 
 ## Inhaltsangabe:
 - [Was ist RasaTUC?](#was-ist-rasatuc)
